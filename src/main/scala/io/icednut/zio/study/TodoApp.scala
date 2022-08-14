@@ -1,17 +1,14 @@
 package io.icednut.zio.study
 
-import zio._
-import zhttp.http._
-import zhttp.service.Server
-
 import sttp.tapir.PublicEndpoint
-import sttp.tapir.ztapir._
 import sttp.tapir.server.ziohttp.ZioHttpInterpreter
+import sttp.tapir.ztapir._
 import zhttp.http.{Http, Request, Response}
+import zhttp.service.Server
+import zio._
 
 
-
-object HelloWorld extends ZIOAppDefault {
+object TodoApp extends ZIOAppDefault {
   def countCharacters(s: String): ZIO[Any, Nothing, Int] =
     ZIO.succeed(s.length)
 
